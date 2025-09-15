@@ -24,4 +24,5 @@ import { MatIconModule } from '@angular/material/icon';
             MatToolbar,
             MatIconModule],
 })
-export class Nav {}
+export class Nav {
+}

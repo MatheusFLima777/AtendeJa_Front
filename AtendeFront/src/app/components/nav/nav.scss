@@ -9,6 +9,7 @@
 
 mat-sidenav {
   width: 220px; // largura do menu lateral
+  background: rgb(255, 153, 20);
 }
 
 mat-sidenav-content {
@@ -20,5 +21,6 @@ mat-sidenav-content {
 .content {
   flex: 1;
   padding: 16px;
-  background: #f5f5f5;
+  background: #fafafa
+ 
 }
