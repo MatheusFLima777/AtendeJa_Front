@@ -5,6 +5,7 @@ import { MatDrawer, MatSidenavModule } from "@angular/material/sidenav";
 import { RouterLink } from "@angular/router";
 import { MatListModule } from '@angular/material/list';
 import { MatToolbar } from "@angular/material/toolbar";
+import { MatIconModule } from '@angular/material/icon';
 
 
 /**
@@ -13,6 +14,14 @@ import { MatToolbar } from "@angular/material/toolbar";
 @Component({
   selector: 'nav',
   templateUrl: 'nav.html',
-  imports: [MatButtonModule, MatMenuModule, MatDrawer, RouterLink, MatSidenavModule, MatListModule, MatToolbar],
+  styleUrl: 'nav.scss',
+  imports: [MatButtonModule, 
+            MatMenuModule, 
+            MatDrawer, 
+            RouterLink, 
+            MatSidenavModule, 
+            MatListModule, 
+            MatToolbar,
+            MatIconModule],
 })
 export class Nav {}
