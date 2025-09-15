@@ -1,12 +1,11 @@
-import {Component} from '@angular/core';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatButtonModule} from '@angular/material/button';
-import { MatDrawer, MatSidenavModule } from "@angular/material/sidenav";
-import { RouterLink } from "@angular/router";
+import { Component } from '@angular/core';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-import { MatToolbar } from "@angular/material/toolbar";
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
-
+import { RouterModule } from '@angular/router';
 
 /**
  * @title Menu positioning
@@ -14,15 +13,16 @@ import { MatIconModule } from '@angular/material/icon';
 @Component({
   selector: 'nav',
   templateUrl: 'nav.html',
-  styleUrl: 'nav.scss',
-  imports: [MatButtonModule, 
-            MatMenuModule, 
-            MatDrawer, 
-            RouterLink, 
-            MatSidenavModule, 
-            MatListModule, 
-            MatToolbar,
-            MatIconModule],
+  styleUrls: ['nav.scss'],
+  standalone: true,
+  imports: [
+    MatButtonModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatListModule,
+    MatToolbarModule,
+    MatIconModule,
+    RouterModule
+  ]
 })
-export class Nav {
-}
+export class Nav {}
