@@ -1,24 +1,40 @@
+
+
 <mat-sidenav-container class="sidenav-container">
   <!-- Menu lateral -->
   <mat-sidenav #sidenav mode="side" opened>
+    
+    <!-- Cabeçalho do menu (logo + nome) -->
+    <div class="sidebar-header">
+      <img src="/assets/logo.svg" alt="Logo" class="logo">
+      <p class="nome-app">Fila do<br>Pastel</p>
+    </div>
+
+    <!-- Lista de navegação -->
     <mat-nav-list>
       <a mat-list-item routerLink="/home">
-        <mat-icon>home</mat-icon> Home
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
       </a>
       <a mat-list-item routerLink="/ticket">
-        <mat-icon>add_circle</mat-icon> Novo ticket
+        <mat-icon>add_circle</mat-icon>
+        <span>Novo ticket</span>
       </a>
       <a mat-list-item routerLink="/tecnicos">
-        <mat-icon>account_circle</mat-icon>Agentes
+        <mat-icon>account_circle</mat-icon>
+        <span>Agentes</span>
       </a>
       <a mat-list-item routerLink="/clientes">
-        <mat-icon>person</mat-icon> Clientes
+        <mat-icon>person</mat-icon>
+        <span>Clientes</span>
       </a>
       <a mat-list-item routerLink="/github">
-        <mat-icon>code</mat-icon> Github
+        <mat-icon>code</mat-icon>
+        <span>Github</span>
       </a>
       <a mat-list-item routerLink="/logout">
-        <mat-icon>logout</mat-icon> Logout
+        <mat-icon>logout</mat-icon>
+        <span>Logout</span>
       </a>
     </mat-nav-list>
   </mat-sidenav>

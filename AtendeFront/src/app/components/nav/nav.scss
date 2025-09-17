@@ -24,3 +24,35 @@ mat-sidenav-content {
   background: #fafafa
  
 }
+
+
+img{
+  width: 40px;       /* tamanho total */
+  height: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+}
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.nome-app {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.2; /* deixa "Atende" em cima do "Já" */
+  color: #333;
+}
+
