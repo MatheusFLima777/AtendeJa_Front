@@ -6,6 +6,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
+import { Header } from "../header/header";
 
 /**
  * @title Menu positioning
@@ -22,7 +23,8 @@ import { RouterModule } from '@angular/router';
     MatListModule,
     MatToolbarModule,
     MatIconModule,
-    RouterModule
-  ]
+    RouterModule,
+    Header
+]
 })
 export class Nav {}
