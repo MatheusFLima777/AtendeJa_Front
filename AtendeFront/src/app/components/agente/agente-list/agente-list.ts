@@ -24,6 +24,15 @@ const ELEMENT_DATA: Agente[] = [
     senha: '1234321',
     perfis: ['0'],
     dataCriacao: '24/08/2025'
+  },
+    {
+    id: 2,
+    nome: 'Gustavo Mosquito',
+    cpf: '123.456.789-10',
+    email: 'gustavo.mosquito@email.com',
+    senha: '1234321',
+    perfis: ['0'],
+    dataCriacao: '24/08/2025'
   }
 ];
 
