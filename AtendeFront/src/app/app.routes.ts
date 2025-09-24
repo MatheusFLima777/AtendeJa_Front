@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { Nav } from './components/nav/nav';
 import { Home } from './components/home/home';
-import { TecnicoList } from './components/tecnico/tecnico-list/tecnico-list';
+import { AgenteList } from './components/agente/agente-list/agente-list';
 
 
 
@@ -13,7 +13,7 @@ export const routes: Routes = [{
     { path: 'ticket', children: [] },
     { path: 'agentes', 
             children: [
-            {path: '', component: TecnicoList },
+            {path: '', component: AgenteList },
             ]},
     { path: 'funcionarios', children: [] },
     { path: 'logout', children: [] },
