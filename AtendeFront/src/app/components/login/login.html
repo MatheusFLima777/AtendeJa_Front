@@ -1,22 +1,29 @@
-<div class="container">
+<form #form="ngForm" (ngSubmit)="login(form)" class="container">
+
   <div class="form mat-elevation-z8">
+
     <div class="header">
       <h1>Fila do pastel</h1>
       <img src="assets/chef.svg" alt="Imagem Chef" />
     </div>
 
     <img src="assets/pastelLogo.jpg" alt="Logo Pastel">
-    <mat-form-field class="email-full-width">
+
+    <mat-form-field class="email-full-width" appearance="fill">
       <mat-label>E-mail</mat-label>
-      <input matInput placeholder="Ex. email@email.com" />
+      <input matInput [(ngModel)]="creds.email" name="email" required email #email="ngModel" placeholder="Ex. email@email.com">
+      <mat-error *ngIf="email.invalid && email.touched">E-mail inválido</mat-error>
     </mat-form-field>
 
-    <mat-form-field class="senha-full-width">
+    <mat-form-field class="senha-full-width" appearance="fill">
       <mat-label>Senha</mat-label>
-      <input type="password" matInput placeholder="Ex. 123" />
+      <input matInput [(ngModel)]="creds.senha" name="senha" required minlength="8" #senha="ngModel" type="password" placeholder="Ex. 12345678">
+      <mat-error *ngIf="senha.invalid && senha.touched">Senha inválida</mat-error>
     </mat-form-field>
 
-    <button class="input-full-width mat-elevation-z4" mat-raised-button color="primary">Entrar</button>
+    <button mat-raised-button color="primary" type="submit" class="input-full-width mat-elevation-z4" [disabled]="!validaCampos(form)">
+      Enviar
+    </button>
 
   </div>
-</div>
+</form>
