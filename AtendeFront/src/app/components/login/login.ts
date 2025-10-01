@@ -5,7 +5,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { Credenciais } from '../../models/credenciais';
 import { CommonModule } from '@angular/common';
-
+import { ToastrService } from 'ngx-toastr';
+import { FormControl, Validators, ReactiveFormsModule } from '@angular/forms'; // Importações adicionadas
 
 @Component({
   selector: 'app-login',
@@ -13,6 +14,7 @@ import { CommonModule } from '@angular/common';
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule
@@ -27,21 +29,17 @@ export class Login {
     senha: ''
   };
 
-  constructor() {}
+  constructor(private toastr: ToastrService) {}
 
-  // Retorna true se o formulário for válido
-  validaCampos(form: NgForm): boolean {
-    console.log(form.valid ? 'Credenciais:' : 'Formulário inválido', this.creds);
-    return !!form.valid; // converte null em false
+  // Método para validar quando os formulários estiverem prontos
+  validaCampos(email: any, senha: any): boolean {
+    return email.valid && senha.valid;
   }
 
-  // Ação do login
-  login(form: NgForm) {
-    if (form.valid) {
-      console.log('Login realizado com sucesso:', this.creds);
-      // Aqui você pode chamar seu serviço de autenticação
-    } else {
-      console.log('Formulário inválido');
+  logar(email: any, senha: any) {
+    if (this.validaCampos(email, senha)) {
+      this.toastr.error('Usuário e/ou senha inválidos', 'Erro');
+      this.creds.senha = '';
     }
   }
 }

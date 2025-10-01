@@ -27,6 +27,7 @@
               }
             ],
             "styles": [
+              "node_modules/ngx-toastr/toastr.css",  // ADICIONE AQUI
               "src/custom-theme.scss",
               "src/styles.scss"
             ]
@@ -87,7 +88,8 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/ngx-toastr/toastr.css"
             ]
           }
         }
@@ -95,6 +97,6 @@
     }
   },
   "cli": {
-    "analytics": "87804441-bc8b-4b01-9b1c-9b063b1b2acc"
+    "analytics": false
   }
 }
